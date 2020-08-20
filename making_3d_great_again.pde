@@ -40,3 +40,29 @@ void draw() {
   box(200);
 
 }
+
+void keyPressed() {
+  print("called it \n ");
+  if (key == ' ')            {ben.up = true;}
+  else if (keyCode == SHIFT) {ben.down = true;}
+  else if (key == 'w')       {ben.forward = true;}
+  else if (key == 's')       {ben.backward = true;}
+  else if (key == 'a')       {ben.strafeL = true;}
+  else if (key == 'd')       {ben.strafeR = true;}
+  else if (keyCode == LEFT)  {ben.lookL = true;}
+  else if (keyCode == RIGHT) {ben.lookR = true;}
+  else if (keyCode == UP)    {ben.lookUp = true;}
+  else if (keyCode == DOWN)  {ben.lookDown = true;}
+}
+void keyReleased() {
+  if (key == ' ')            {ben.up = false;}
+  else if (keyCode == SHIFT) {ben.down = false;}
+  else if (key == 'w')       {ben.forward = false;}
+  else if (key == 's')       {ben.backward = false;}
+  else if (key == 'a')       {ben.strafeL = false;}
+  else if (key == 'd')       {ben.strafeR = false;}
+  else if (keyCode == LEFT)  {ben.lookL = false;}
+  else if (keyCode == RIGHT) {ben.lookR = false;}
+  else if (keyCode == UP)    {ben.lookUp = false;}
+  else if (keyCode == DOWN)  {ben.lookDown = false;}
+}
