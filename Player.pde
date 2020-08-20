@@ -33,28 +33,24 @@ class Player {
   }
  
   void update() { 
- 
-    pd();
-    c = p.copy().add(d);
     
-    camera(p.x, p.y, p.z, c.x, c.y, c.z, 0, 1, 0);  
-    
-  }
-  
-  void pd() { //updates direction and position
+    //update camera data
+    camera(p.x, p.y, p.z, c.x, c.y, c.z, 0, 1, 0);
     
     //update direction
+    float increment = 0.02;
+    
     if (lookL) {
-      azimuth = (azimuth + 0.05) % TWO_PI;        
+      azimuth = (azimuth + increment) % TWO_PI;        
     }
     if (lookR) {
-      azimuth = (azimuth - 0.05) % TWO_PI;
+      azimuth = (azimuth - increment) % TWO_PI;
     }
     if (lookUp) {
-      inclination = constrain((inclination + 0.05), 0.01, PI-0.01);
+      inclination = constrain((inclination + increment), 0.01, PI-0.01);
     }
     if (lookDown) {
-      inclination = constrain((inclination - 0.05), 0.01, PI-0.01);
+      inclination = constrain((inclination - increment), 0.01, PI-0.01);
     }
 
     float z = sin(inclination) * cos(azimuth);
@@ -83,7 +79,11 @@ class Player {
     }
     if (down) {
       p.add(0, 10, 0);
-    }  
+    } 
+    
+    //update centre of scene
+    c = p.copy().add(d);
+    
   }
   
 }

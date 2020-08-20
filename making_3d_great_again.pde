@@ -7,13 +7,12 @@ void setup() {
 
 
 void draw() {
-  //print(ben.get_coords(), "\n");
-
 
   ben.update();
 
-  
   background(200);
+  
+  //BOXES
   push();
   translate(0, 0, -500);
   stroke(255);
@@ -42,27 +41,26 @@ void draw() {
 }
 
 void keyPressed() {
-  print("called it \n ");
-  if (key == ' ')            {ben.up = true;}
-  else if (keyCode == SHIFT) {ben.down = true;}
-  else if (key == 'w')       {ben.forward = true;}
-  else if (key == 's')       {ben.backward = true;}
-  else if (key == 'a')       {ben.strafeL = true;}
-  else if (key == 'd')       {ben.strafeR = true;}
-  else if (keyCode == LEFT)  {ben.lookL = true;}
-  else if (keyCode == RIGHT) {ben.lookR = true;}
-  else if (keyCode == UP)    {ben.lookUp = true;}
-  else if (keyCode == DOWN)  {ben.lookDown = true;}
+  if (key == ' ')       {ben.up = true;}
+  if (keyCode == SHIFT) {ben.down = true;}
+  if (key == 'w')       {ben.forward = true;}
+  if (key == 's')       {ben.backward = true;}
+  if (key == 'a')       {ben.strafeL = true;}
+  if (key == 'd')       {ben.strafeR = true;}
+  if (keyCode == LEFT)  {ben.lookL = true;}
+  if (keyCode == RIGHT) {ben.lookR = true;}
+  if (keyCode == UP)    {ben.lookUp = true;}
+  if (keyCode == DOWN)  {ben.lookDown = true;}
 }
 void keyReleased() {
-  if (key == ' ')            {ben.up = false;}
-  else if (keyCode == SHIFT) {ben.down = false;}
-  else if (key == 'w')       {ben.forward = false;}
-  else if (key == 's')       {ben.backward = false;}
-  else if (key == 'a')       {ben.strafeL = false;}
-  else if (key == 'd')       {ben.strafeR = false;}
-  else if (keyCode == LEFT)  {ben.lookL = false;}
-  else if (keyCode == RIGHT) {ben.lookR = false;}
-  else if (keyCode == UP)    {ben.lookUp = false;}
-  else if (keyCode == DOWN)  {ben.lookDown = false;}
+  if (key == ' ')       {ben.up = false;}
+  if (keyCode == SHIFT) {ben.down = false;}
+  if (key == 'w')       {ben.forward = false;}
+  if (key == 's')       {ben.backward = false;}
+  if (key == 'a')       {ben.strafeL = false;}
+  if (key == 'd')       {ben.strafeR = false;}
+  if (keyCode == LEFT)  {ben.lookL = false;}
+  if (keyCode == RIGHT) {ben.lookR = false;}
+  if (keyCode == UP)    {ben.lookUp = false;}
+  if (keyCode == DOWN)  {ben.lookDown = false;}
 }
